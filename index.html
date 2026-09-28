@@ -4,16 +4,38 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy – Flappy Rocks</title>
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f6f7fb">
 <meta name="description" content="Privacy Policy for the mobile game Flappy Rocks / 隐私政策 / Política de privacidad.">
+<script>
+/* Se aplica ANTES de pintar la página para que no parpadee: ?theme=dark|light  →  elección guardada  →  modo del sistema. */
+(function () {
+  var theme = null;
+  var m = /[?&]theme=(dark|light)/i.exec(window.location.search);
+  if (m) theme = m[1].toLowerCase();
+  if (!theme) { try { var t = window.localStorage.getItem('flappy-rocks-privacy-theme'); if (t === 'dark' || t === 'light') theme = t; } catch (e) {} }
+  if (!theme) theme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', theme);
+})();
+</script>
 <style>
   :root {
     --bg: #f6f7fb; --card: #ffffff; --text: #1d2233; --muted: #5d6478; --line: #e2e5ee;
-    --accent: #2b6cb0; --accent-soft: #e8f1fb; --warn: #fff7e0; --warn-line: #f0d98a;
+    --accent: #2b6cb0; --on-accent: #ffffff; --accent-soft: #e8f1fb; --warn: #fff7e0; --warn-line: #f0d98a;
+    color-scheme: light;
   }
+  /* Modo oscuro elegido a mano (botón) */
+  :root[data-theme="dark"] {
+    --bg: #12151d; --card: #1a1f2b; --text: #e8ebf3; --muted: #a2a9bd; --line: #2b3244;
+    --accent: #7db4ee; --on-accent: #0d1522; --accent-soft: #1d2a3d; --warn: #2a2515; --warn-line: #5a4d1e;
+    color-scheme: dark;
+  }
+  /* Sin JavaScript (o antes de que cargue) se sigue el modo del sistema */
   @media (prefers-color-scheme: dark) {
-    :root {
+    :root:not([data-theme]) {
       --bg: #12151d; --card: #1a1f2b; --text: #e8ebf3; --muted: #a2a9bd; --line: #2b3244;
-      --accent: #7db4ee; --accent-soft: #1d2a3d; --warn: #2a2515; --warn-line: #5a4d1e;
+      --accent: #7db4ee; --on-accent: #0d1522; --accent-soft: #1d2a3d; --warn: #2a2515; --warn-line: #5a4d1e;
+      color-scheme: dark;
     }
   }
   * { box-sizing: border-box; }
@@ -37,7 +59,15 @@
     border: 1px solid var(--line); background: transparent; color: var(--text);
   }
   .lang-switch button:hover { border-color: var(--accent); }
-  .lang-switch button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .lang-switch button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+  .controls { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .theme-btn {
+    font: inherit; font-size: .92rem; padding: 6px 14px; border-radius: 999px; cursor: pointer;
+    border: 1px solid var(--line); background: transparent; color: var(--text);
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .theme-btn:hover { border-color: var(--accent); }
+  .theme-btn:focus-visible, .lang-switch button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   main { max-width: 820px; margin: 0 auto; padding: 24px 16px 56px; }
   .lang-section { display: none; }
   .lang-section.active { display: block; }
@@ -69,7 +99,7 @@
   @media print { header.top { display: none; } .lang-section { display: block !important; page-break-after: always; } .doc { border: 0; } }
 </style>
 <noscript>
-  <style>.lang-section { display: block; margin-bottom: 32px; } .lang-switch { display: none; }</style>
+  <style>.lang-section { display: block; margin-bottom: 32px; } .lang-switch, .theme-btn { display: none; }</style>
 </noscript>
 </head>
 <body>
@@ -77,11 +107,14 @@
 <header class="top">
   <div class="bar">
     <div class="brand">🎮 Flappy Rocks</div>
-    <nav class="lang-switch" aria-label="Language / 语言 / Idioma">
-      <button type="button" data-lang="en" aria-pressed="true">English</button>
-      <button type="button" data-lang="zh" aria-pressed="false">中文</button>
-      <button type="button" data-lang="es" aria-pressed="false">Español</button>
-    </nav>
+    <div class="controls">
+      <nav class="lang-switch" aria-label="Language / 语言 / Idioma">
+        <button type="button" data-lang="en" aria-pressed="true">English</button>
+        <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+        <button type="button" data-lang="es" aria-pressed="false">Español</button>
+      </nav>
+      <button type="button" class="theme-btn" id="theme-toggle"><span class="ico" aria-hidden="true"></span><span class="lbl"></span></button>
+    </div>
   </div>
 </header>
 
@@ -504,6 +537,36 @@
   var HTML_LANG = { en: 'en', zh: 'zh-Hans', es: 'es' };
   var KEY = 'flappy-rocks-privacy-lang';
 
+  var THEME_KEY = 'flappy-rocks-privacy-theme';
+  // Etiqueta del botón = el modo al que se CAMBIA al tocarlo.
+  var THEME_TEXT = {
+    en: { toDark: 'Dark',   toLight: 'Light', aDark: 'Switch to dark mode',       aLight: 'Switch to light mode' },
+    zh: { toDark: '深色',    toLight: '浅色',   aDark: '切换到深色模式',              aLight: '切换到浅色模式' },
+    es: { toDark: 'Oscuro', toLight: 'Claro', aDark: 'Cambiar a modo oscuro',     aLight: 'Cambiar a modo claro' }
+  };
+  var currentLang = 'en';
+
+  function currentTheme() { return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'; }
+
+  function renderThemeButton() {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    var dark = currentTheme() === 'dark';
+    var t = THEME_TEXT[currentLang];
+    btn.querySelector('.ico').textContent = dark ? '\u2600\uFE0F' : '\uD83C\uDF19'; // ☀️ / 🌙
+    btn.querySelector('.lbl').textContent = dark ? t.toLight : t.toDark;
+    btn.setAttribute('aria-label', dark ? t.aLight : t.aDark);
+    btn.setAttribute('title', dark ? t.aLight : t.aDark);
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', dark ? '#12151d' : '#f6f7fb');
+  }
+
+  function setTheme(theme, remember) {
+    document.documentElement.setAttribute('data-theme', theme);
+    if (remember) { try { window.localStorage.setItem(THEME_KEY, theme); } catch (e) { /* almacenamiento bloqueado: se ignora */ } }
+    renderThemeButton();
+  }
+
   function safeGet() { try { return window.localStorage.getItem(KEY); } catch (e) { return null; } }
   function safeSet(v) { try { window.localStorage.setItem(KEY, v); } catch (e) { /* almacenamiento bloqueado: se ignora */ } }
 
@@ -531,6 +594,8 @@
       buttons[i].setAttribute('aria-pressed', buttons[i].getAttribute('data-lang') === lang ? 'true' : 'false');
     }
     document.documentElement.lang = HTML_LANG[lang];
+    currentLang = lang;
+    renderThemeButton();
     var active = document.getElementById(lang);
     if (active && active.getAttribute('data-title')) document.title = active.getAttribute('data-title');
     if (remember) safeSet(lang);
@@ -545,6 +610,9 @@
   for (var i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', function () { setLang(this.getAttribute('data-lang'), true); });
   }
+
+  var themeBtn = document.getElementById('theme-toggle');
+  if (themeBtn) themeBtn.addEventListener('click', function () { setTheme(currentTheme() === 'dark' ? 'light' : 'dark', true); });
 
   // Prioridad: ?lang=xx en la URL (útil para darle un link directo a un revisor) → última elección → idioma del navegador.
   var initial = fromUrl() || (LANGS.indexOf(safeGet()) !== -1 ? safeGet() : null) || detect();
