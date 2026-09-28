@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy – Flappy Rocks</title>
+<meta name="description" content="Privacy Policy for the mobile game Flappy Rocks / 隐私政策 / Política de privacidad.">
+<style>
+  :root {
+    --bg: #f6f7fb; --card: #ffffff; --text: #1d2233; --muted: #5d6478; --line: #e2e5ee;
+    --accent: #2b6cb0; --accent-soft: #e8f1fb; --warn: #fff7e0; --warn-line: #f0d98a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12151d; --card: #1a1f2b; --text: #e8ebf3; --muted: #a2a9bd; --line: #2b3244;
+      --accent: #7db4ee; --accent-soft: #1d2a3d; --warn: #2a2515; --warn-line: #5a4d1e;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text); line-height: 1.65;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+                 "Noto Sans", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  }
+  header.top {
+    position: sticky; top: 0; z-index: 10; background: var(--card); border-bottom: 1px solid var(--line);
+  }
+  .bar {
+    max-width: 820px; margin: 0 auto; padding: 10px 16px; display: flex; align-items: center;
+    justify-content: space-between; gap: 12px; flex-wrap: wrap;
+  }
+  .brand { font-weight: 700; font-size: 1.05rem; }
+  .lang-switch { display: flex; gap: 6px; }
+  .lang-switch button {
+    font: inherit; font-size: .92rem; padding: 6px 14px; border-radius: 999px; cursor: pointer;
+    border: 1px solid var(--line); background: transparent; color: var(--text);
+  }
+  .lang-switch button:hover { border-color: var(--accent); }
+  .lang-switch button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+  main { max-width: 820px; margin: 0 auto; padding: 24px 16px 56px; }
+  .lang-section { display: none; }
+  .lang-section.active { display: block; }
+  .doc { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 28px 26px; }
+  h1 { margin: 0 0 4px; font-size: 1.85rem; line-height: 1.25; }
+  .meta { color: var(--muted); margin: 0 0 22px; font-size: .95rem; }
+  h2 { margin: 34px 0 8px; font-size: 1.28rem; padding-top: 6px; border-top: 1px solid var(--line); }
+  h2:first-of-type { border-top: 0; }
+  h3 { margin: 22px 0 4px; font-size: 1.03rem; }
+  p { margin: 8px 0; }
+  ul { margin: 8px 0 8px 1.2em; padding: 0; }
+  li { margin: 4px 0; }
+  a { color: var(--accent); }
+  .summary {
+    background: var(--accent-soft); border: 1px solid var(--line); border-left: 5px solid var(--accent);
+    border-radius: 10px; padding: 14px 18px; margin: 0 0 8px;
+  }
+  .summary h2 { border: 0; margin: 0 0 6px; padding: 0; font-size: 1.1rem; }
+  .note {
+    background: var(--warn); border: 1px solid var(--warn-line); border-radius: 10px; padding: 10px 14px; margin: 12px 0;
+  }
+  .table-wrap { overflow-x: auto; margin: 12px 0; }
+  table { border-collapse: collapse; width: 100%; min-width: 600px; font-size: .93rem; }
+  th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: var(--accent-soft); }
+  code { background: var(--accent-soft); padding: 1px 6px; border-radius: 5px; font-size: .9em; }
+  footer { max-width: 820px; margin: 0 auto; padding: 0 16px 40px; color: var(--muted); font-size: .88rem; text-align: center; }
+  @media (max-width: 560px) { .doc { padding: 20px 16px; } h1 { font-size: 1.5rem; } }
+  @media print { header.top { display: none; } .lang-section { display: block !important; page-break-after: always; } .doc { border: 0; } }
+</style>
+<noscript>
+  <style>.lang-section { display: block; margin-bottom: 32px; } .lang-switch { display: none; }</style>
+</noscript>
+</head>
+<body>
+
+<header class="top">
+  <div class="bar">
+    <div class="brand">🎮 Flappy Rocks</div>
+    <nav class="lang-switch" aria-label="Language / 语言 / Idioma">
+      <button type="button" data-lang="en" aria-pressed="true">English</button>
+      <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+      <button type="button" data-lang="es" aria-pressed="false">Español</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- =====================================================================
+     ENGLISH
+     ===================================================================== -->
+<section class="lang-section active" id="en" lang="en" data-title="Privacy Policy – Flappy Rocks">
+<article class="doc">
+  <h1>Privacy Policy</h1>
+  <p class="meta">Flappy Rocks · Last updated: September 28, 2026</p>
+
+  <div class="summary">
+    <h2>Summary</h2>
+    <ul>
+      <li>There is <strong>no account or sign-up</strong>. We do not ask for your real name, email, phone number or location.</li>
+      <li>The photo you pick in <strong>“Create your character” is processed only on your device</strong>. It is never uploaded to the internet — not to our servers, not to Firebase, not to anyone.</li>
+      <li>The <strong>nickname you type and your scores are shown on a public leaderboard</strong>. Please do not use your real name.</li>
+      <li>The game shows <strong>ads</strong> (banner and optional rewarded videos). Ad networks may collect a device advertising identifier.</li>
+      <li>We <strong>do not sell</strong> your data.</li>
+    </ul>
+  </div>
+
+  <h2>1. Who we are</h2>
+  <p>This Privacy Policy explains how the mobile game <strong>Flappy Rocks</strong> (package name <code>com.davidtoledo.gallitorocas</code>; “the app” or “the game”) handles information. The app is developed and published by <strong>David Toledo Sánchez</strong>, an independent developer based in Lima, Peru (“we”, “us”). By using the app you agree to this policy. If you do not agree, please do not use the app.</p>
+
+  <h2>2. Information we handle</h2>
+  <h3>2.1 Information you choose to give us</h3>
+  <ul>
+    <li><strong>Nickname (optional).</strong> You can set a nickname from the main menu. If you do not, your scores are saved as “Anonymous”. It is free text that you type, so please avoid personal information.</li>
+    <li><strong>Game results.</strong> When a run ends we save your score, the place (level) where you played and the date and time, together with your nickname. These make up the public leaderboard (see section 4).</li>
+    <li><strong>A photo (optional).</strong> Only if you use “Create your character” (see section 3).</li>
+  </ul>
+  <h3>2.2 Information collected automatically by third-party services</h3>
+  <p>The advertising services and Google Firebase, which the app uses, may process technical information such as your IP address, device and operating-system details and an advertising identifier. See sections 5 and 6.</p>
+  <h3>2.3 Information we do not collect</h3>
+  <ul>
+    <li>Real name, email address, phone number or postal address.</li>
+    <li>Your location (precise or approximate). The app does not request location permission.</li>
+    <li>Contacts, microphone, camera or storage permissions. The app only declares Internet and network-state access.</li>
+    <li>No login and no social-media accounts. We do not use analytics or crash-reporting tools of our own.</li>
+  </ul>
+  <h3>2.4 Information stored only on your device</h3>
+  <p>Your settings and progress (nickname, sound on/off, selected place, places you have unlocked, counters used to decide when a rewarded video is offered) and your custom character (a small face image, plus the background and wings you chose). This information stays on your device and is not sent anywhere, except the nickname that accompanies your scores.</p>
+
+  <h2>3. Your photo and “Create your character”</h2>
+  <p>This feature is optional. It lets you turn a photo of yourself (or anyone you choose) into a flying character.</p>
+  <ul>
+    <li><strong>How you pick the photo.</strong> You choose between your gallery and your camera. The app opens your device’s own photo picker or camera app, so <strong>the app does not need camera or storage permission</strong>. The app only receives the single image you select or take.</li>
+    <li><strong>Everything happens on your device.</strong> The photo is cropped, reduced to a small round face image (192 × 192 pixels) and combined with wings, all locally.</li>
+    <li><strong>Where it is kept.</strong> A reduced temporary copy of the chosen photo is kept in the app’s private cache folder (other apps cannot read it) so it can be cropped. Photos taken through this feature are also written to that private folder, not to your gallery. The final face image is kept in the app’s private storage.</li>
+    <li><strong>We do not store your images on the internet.</strong> Your photo and your face image are never uploaded, transmitted, sold or shared. They are not sent to our servers, to Firebase, to advertisers or to any other third party, and we cannot see them.</li>
+    <li><strong>How to delete them.</strong> Creating a new character replaces the previous face image. You can also use “Clear storage / Clear cache” for the app in your device settings, or uninstall the app, and everything is removed.</li>
+    <li>The camera and gallery apps you use are provided by your device or by third parties and are governed by their own privacy policies.</li>
+  </ul>
+
+  <h2>4. Public leaderboard</h2>
+  <ul>
+    <li><strong>What is published:</strong> your nickname, score, place and date. It is stored in Google Firebase Cloud Firestore.</li>
+    <li><strong>Who can see it:</strong> the ranking is public — any player can see the top scores with their nicknames. It does not include your photo, your device identifiers or any contact information.</li>
+    <li><strong>Please choose a nickname that does not identify you.</strong></li>
+    <li><strong>Retention:</strong> entries are kept for as long as the leaderboard exists. The app does not let users edit or delete entries, but you can ask us to delete yours (see section 9).</li>
+    <li>Changing your nickname only affects future scores; earlier entries keep the old nickname unless you ask us to delete them.</li>
+  </ul>
+
+  <h2>5. Advertising</h2>
+  <p>The app is supported by ads: a <strong>banner</strong> on some screens and <strong>rewarded videos</strong> that you may choose to watch (for example to unlock a place, to continue after a Game Over, or to open “Create your character”).</p>
+  <p>Depending on the version you installed, ads are provided by <strong>Google AdMob</strong> (Google LLC) or by <strong>Huawei Ads Kit / Petal Ads</strong> (Huawei, in the version for Huawei devices). These providers may collect and use:</p>
+  <ul>
+    <li>an advertising identifier (Google Advertising ID, or Huawei Open Advertising ID – OAID);</li>
+    <li>IP address and approximate location derived from it;</li>
+    <li>device and operating-system information (model, OS version, language, screen size), and app information;</li>
+    <li>how you interact with ads (impressions, clicks, video views).</li>
+  </ul>
+  <p>They use this to deliver and measure ads, prevent fraud and, where the law and your settings allow, personalize ads. <strong>We do not receive this data</strong>; we only see aggregated reports (for example, number of impressions). Ads may lead to websites or stores that we do not control.</p>
+  <p><strong>Your controls.</strong> In your device settings you can reset or delete your advertising ID and opt out of personalized ads (on Google devices, look under Settings › Google › Ads, or Privacy › Ads; on Huawei devices, under Settings › Privacy › Ads — the names of the menus vary by device and system version). Watching rewarded videos is always optional.</p>
+
+  <h2>6. Third-party services</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Service</th><th>Provider</th><th>Purpose</th><th>Data involved</th><th>More information</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Firebase Cloud Firestore</td><td>Google LLC</td><td>Stores the public leaderboard</td>
+        <td>Nickname, score, place, date; technical data (such as IP address) processed by Google to deliver the service</td>
+        <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase privacy</a></td>
+      </tr>
+      <tr>
+        <td>Google AdMob</td><td>Google LLC</td><td>Ads (standard version)</td>
+        <td>Advertising ID, IP address, device information, ad interactions</td>
+        <td><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses data</a> · <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></td>
+      </tr>
+      <tr>
+        <td>Huawei Ads Kit (Petal Ads)</td><td>Huawei</td><td>Ads (Huawei-devices version)</td>
+        <td>OAID, IP address, device information, ad interactions</td>
+        <td><a href="https://developer.huawei.com/consumer/en/hms/huawei-adskit/" target="_blank" rel="noopener">Ads Kit</a> and Huawei’s privacy statement</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <p>These providers act under their own terms and privacy policies, which we encourage you to read.</p>
+
+  <h2>7. How we use information</h2>
+  <ul>
+    <li>To run the game and its features (leaderboard, custom character, unlocking places).</li>
+    <li>To keep the leaderboard working and to remove abusive or inappropriate nicknames or entries.</li>
+    <li>To show ads that help fund the app.</li>
+  </ul>
+  <p>We <strong>do not sell</strong> your personal information and we do not build profiles about you.</p>
+
+  <h2>8. Sharing, retention, security and transfers</h2>
+  <ul>
+    <li><strong>Sharing.</strong> Only with the service providers listed above, when required by law, or to protect our rights or the safety of users. The leaderboard is public by design.</li>
+    <li><strong>Retention.</strong> Data on your device stays until you clear the app’s data or uninstall it. Leaderboard entries stay until they are deleted at your request or the leaderboard is retired.</li>
+    <li><strong>Security.</strong> Data travels to and from Firebase over encrypted connections (HTTPS/TLS), and the leaderboard has server-side rules that limit what can be written. No method of storage or transmission is 100% secure.</li>
+    <li><strong>International transfers.</strong> Google and Huawei may process data in countries other than yours, including the United States, under their own safeguards.</li>
+  </ul>
+
+  <h2>9. Your choices and rights</h2>
+  <ul>
+    <li><strong>Nickname:</strong> you can change or clear it at any time from the main menu.</li>
+    <li><strong>Photo and character:</strong> stored only on your device; delete them as described in section 3.</li>
+    <li><strong>Ads:</strong> use the device controls in section 5. Rewarded videos are optional.</li>
+    <li><strong>Leaderboard deletion:</strong> write to us at the email below with your nickname and, if possible, the approximate score, place and date, and we will delete the entries within a reasonable time (normally within 30 days).</li>
+    <li><strong>Legal rights.</strong> Depending on where you live (for example under the EU/UK GDPR, the California CCPA/CPRA or Peru’s Personal Data Protection Law No. 29733) you may have the right to access, correct, delete, restrict or object to the processing of your personal data, to withdraw consent, and to lodge a complaint with your data-protection authority. Contact us to exercise them.</li>
+  </ul>
+
+  <h2>10. Children</h2>
+  <p>The app is not directed to children under 13 (or the higher minimum age set by the law of your country, such as 16 in parts of the EU). We do not knowingly collect personal information from children. If you are a parent or guardian and believe your child has published information on the leaderboard, contact us and we will remove it.</p>
+
+  <h2>11. Changes to this policy</h2>
+  <p>We may update this policy from time to time. The date at the top shows the latest version; when the changes are important we will make that clear in the app or in the store listing. Continuing to use the app after a change means you accept the updated policy.</p>
+
+  <h2>12. Contact</h2>
+  <p>David Toledo Sánchez · Lima, Peru<br>
+  Email: <a href="mailto:dtoledos2014@gmail.com">dtoledos2014@gmail.com</a></p>
+</article>
+</section>
+
+<!-- =====================================================================
+     中文（简体）
+     ===================================================================== -->
+<section class="lang-section" id="zh" lang="zh-Hans" data-title="隐私政策 – Flappy Rocks">
+<article class="doc">
+  <h1>隐私政策</h1>
+  <p class="meta">Flappy Rocks · 最后更新：2026年9月28日</p>
+
+  <div class="summary">
+    <h2>摘要</h2>
+    <ul>
+      <li><strong>无需注册账号</strong>。我们不会询问您的真实姓名、电子邮箱、电话号码或位置信息。</li>
+      <li>您在<strong>“创建你的角色”中选择的照片仅在您的设备上处理</strong>，绝不会上传到互联网——不会发送到我们的服务器、Firebase 或任何第三方。</li>
+      <li>您输入的<strong>昵称和游戏分数会显示在公开排行榜上</strong>，请勿使用真实姓名。</li>
+      <li>游戏会展示<strong>广告</strong>（横幅广告和可选的激励视频广告）。广告网络可能会收集设备广告标识符。</li>
+      <li>我们<strong>不会出售</strong>您的数据。</li>
+    </ul>
+  </div>
+
+  <h2>1. 我们是谁</h2>
+  <p>本隐私政策说明手机游戏 <strong>Flappy Rocks</strong>（应用包名 <code>com.davidtoledo.gallitorocas</code>，以下简称“本应用”或“本游戏”）如何处理信息。本应用由常驻秘鲁利马的独立开发者 <strong>David Toledo Sánchez</strong>（以下简称“我们”）开发并发布。使用本应用即表示您同意本政策；如不同意，请不要使用本应用。</p>
+
+  <h2>2. 我们处理的信息</h2>
+  <h3>2.1 您主动提供的信息</h3>
+  <ul>
+    <li><strong>昵称（可选）。</strong>您可以在主菜单中设置昵称。如未设置，您的分数将以“匿名”（Anonymous）保存。昵称为您自行输入的自由文本，请避免填写个人信息。</li>
+    <li><strong>游戏成绩。</strong>每局结束时，我们会保存您的分数、游玩的地点（关卡）以及日期和时间，并与您的昵称一起保存。这些内容构成公开排行榜（见第 4 节）。</li>
+    <li><strong>照片（可选）。</strong>仅当您使用“创建你的角色”功能时才会涉及（见第 3 节）。</li>
+  </ul>
+  <h3>2.2 由第三方服务自动收集的信息</h3>
+  <p>本应用使用的广告服务和 Google Firebase 可能会处理技术信息，例如您的 IP 地址、设备和操作系统信息以及广告标识符。详见第 5 节和第 6 节。</p>
+  <h3>2.3 我们不收集的信息</h3>
+  <ul>
+    <li>真实姓名、电子邮箱、电话号码或通信地址。</li>
+    <li>您的位置信息（精确或大致位置）。本应用不会申请定位权限。</li>
+    <li>通讯录、麦克风、相机或存储权限。本应用仅声明了联网和网络状态访问权限。</li>
+    <li>没有登录，也不使用社交媒体账号。我们自己不使用任何统计分析或崩溃报告工具。</li>
+  </ul>
+  <h3>2.4 仅保存在您设备上的信息</h3>
+  <p>您的设置和进度（昵称、声音开关、当前选择的地点、已解锁的地点、用于判断何时提供激励视频的计数）以及您的自定义角色（一张小的脸部图片，以及您选择的背景和翅膀）。这些信息只保存在您的设备上，不会发送到任何地方，但随分数一同上传的昵称除外。</p>
+
+  <h2>3. 您的照片与“创建你的角色”</h2>
+  <p>该功能为可选功能，可让您将自己（或您选择的任何人）的照片变成一个会飞的角色。</p>
+  <ul>
+    <li><strong>如何选择照片。</strong>您可以选择从相册选取或用相机拍摄。应用会打开您设备自带的照片选择器或相机应用，因此<strong>本应用不需要相机或存储权限</strong>。应用只会收到您选择或拍摄的那一张图片。</li>
+    <li><strong>所有处理都在您的设备上完成。</strong>照片会在本地被裁剪、缩小为一张小的圆形脸部图片（192 × 192 像素），并与翅膀合成。</li>
+    <li><strong>保存位置。</strong>为了进行裁剪，所选照片的缩小版临时副本会保存在应用的私有缓存文件夹中（其他应用无法读取）。通过该功能拍摄的照片也会写入这个私有文件夹，而不是您的相册。最终的脸部图片保存在应用的私有存储空间中。</li>
+    <li><strong>我们不会将您的图片存放在互联网上。</strong>您的照片和脸部图片绝不会被上传、传输、出售或分享，也不会发送给我们的服务器、Firebase、广告商或任何其他第三方，我们也无法看到它们。</li>
+    <li><strong>如何删除。</strong>创建新角色会替换之前的脸部图片。您也可以在设备设置中对本应用执行“清除存储/清除缓存”，或卸载本应用，所有内容都会被删除。</li>
+    <li>您使用的相机和相册应用由您的设备或第三方提供，受其各自隐私政策的约束。</li>
+  </ul>
+
+  <h2>4. 公开排行榜</h2>
+  <ul>
+    <li><strong>公开的内容：</strong>您的昵称、分数、地点和日期，存储在 Google Firebase Cloud Firestore 中。</li>
+    <li><strong>谁可以看到：</strong>排行榜是公开的——任何玩家都可以看到最高分及其昵称。其中不包含您的照片、设备标识符或任何联系方式。</li>
+    <li><strong>请选择一个无法识别您身份的昵称。</strong></li>
+    <li><strong>保留期限：</strong>只要排行榜存在，记录就会保留。应用不允许用户自行修改或删除记录，但您可以要求我们删除您的记录（见第 9 节）。</li>
+    <li>更改昵称只影响之后的分数；除非您要求我们删除，之前的记录仍使用旧昵称。</li>
+  </ul>
+
+  <h2>5. 广告</h2>
+  <p>本应用依靠广告运营：部分界面会显示<strong>横幅广告</strong>，还有您可以自愿观看的<strong>激励视频广告</strong>（例如用于解锁地点、在游戏结束后继续，或进入“创建你的角色”）。</p>
+  <p>根据您安装的版本，广告由 <strong>Google AdMob</strong>（Google LLC）或 <strong>华为 Ads Kit / Petal Ads</strong>（华为设备版本，由华为提供）提供。这些服务商可能会收集并使用：</p>
+  <ul>
+    <li>广告标识符（Google 广告 ID，或华为开放匿名标识符 OAID）；</li>
+    <li>IP 地址及据此推断的大致位置；</li>
+    <li>设备和操作系统信息（型号、系统版本、语言、屏幕尺寸）以及应用信息；</li>
+    <li>您与广告的互动情况（展示、点击、视频观看）。</li>
+  </ul>
+  <p>它们利用这些信息来投放和衡量广告、防止欺诈，并在法律和您的设置允许的情况下提供个性化广告。<strong>我们不会收到这些数据</strong>，只能看到汇总报告（例如展示次数）。广告可能会跳转到我们无法控制的网站或应用商店。</p>
+  <p><strong>您的选择。</strong>您可以在设备设置中重置或删除广告 ID，并选择退出个性化广告（Google 设备：设置 › Google › 广告，或 隐私 › 广告；华为设备：设置 › 隐私 › 广告——菜单名称因设备和系统版本而异）。观看激励视频始终是自愿的。</p>
+
+  <h2>6. 第三方服务</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>服务</th><th>提供方</th><th>用途</th><th>涉及的数据</th><th>更多信息</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Firebase Cloud Firestore</td><td>Google LLC</td><td>存储公开排行榜</td>
+        <td>昵称、分数、地点、日期；Google 为提供服务而处理的技术数据（如 IP 地址）</td>
+        <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 隐私说明</a></td>
+      </tr>
+      <tr>
+        <td>Google AdMob</td><td>Google LLC</td><td>广告（标准版本）</td>
+        <td>广告 ID、IP 地址、设备信息、广告互动</td>
+        <td><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google 如何使用数据</a> · <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隐私权政策</a></td>
+      </tr>
+      <tr>
+        <td>华为 Ads Kit（Petal Ads）</td><td>华为</td><td>广告（华为设备版本）</td>
+        <td>OAID、IP 地址、设备信息、广告互动</td>
+        <td><a href="https://developer.huawei.com/consumer/en/hms/huawei-adskit/" target="_blank" rel="noopener">Ads Kit</a> 及华为隐私声明</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <p>这些服务商依照其各自的条款和隐私政策运营，建议您阅读。</p>
+
+  <h2>7. 我们如何使用信息</h2>
+  <ul>
+    <li>用于运行游戏及其功能（排行榜、自定义角色、解锁地点）。</li>
+    <li>用于维持排行榜正常运作，并删除滥用或不当的昵称或记录。</li>
+    <li>用于展示有助于维持本应用运营的广告。</li>
+  </ul>
+  <p>我们<strong>不会出售</strong>您的个人信息，也不会对您建立用户画像。</p>
+
+  <h2>8. 共享、保留、安全与跨境传输</h2>
+  <ul>
+    <li><strong>共享。</strong>仅在以下情况共享：与上述服务提供商共享；法律要求；或为保护我们的权利或用户的安全。排行榜按设计是公开的。</li>
+    <li><strong>保留。</strong>您设备上的数据会保留到您清除应用数据或卸载应用为止。排行榜记录会保留到应您的要求被删除或排行榜停止运营为止。</li>
+    <li><strong>安全。</strong>与 Firebase 之间的数据通过加密连接（HTTPS/TLS）传输，排行榜设有服务器端规则，限制可写入的内容。没有任何存储或传输方式是 100% 安全的。</li>
+    <li><strong>跨境传输。</strong>Google 和华为可能在您所在国家/地区以外（包括美国）依据其自身的保障措施处理数据。</li>
+  </ul>
+
+  <h2>9. 您的选择与权利</h2>
+  <ul>
+    <li><strong>昵称：</strong>您可以随时在主菜单中更改或清除。</li>
+    <li><strong>照片与角色：</strong>仅保存在您的设备上；请按第 3 节所述方式删除。</li>
+    <li><strong>广告：</strong>使用第 5 节中的设备控制选项。激励视频是可选的。</li>
+    <li><strong>删除排行榜记录：</strong>请通过下方邮箱联系我们，并提供您的昵称，以及（如可能）大致的分数、地点和日期，我们会在合理时间内（通常为 30 天内）删除相关记录。</li>
+    <li><strong>法律权利。</strong>根据您所在的地区（例如欧盟/英国 GDPR、美国加州 CCPA/CPRA 或秘鲁第 29733 号《个人数据保护法》），您可能享有访问、更正、删除、限制或反对处理您个人数据的权利，以及撤回同意并向数据保护机构投诉的权利。请联系我们行使这些权利。</li>
+  </ul>
+
+  <h2>10. 儿童</h2>
+  <p>本应用不面向 13 岁以下的儿童（或您所在国家/地区法律规定的更高最低年龄，例如欧盟部分地区为 16 岁）。我们不会故意收集儿童的个人信息。如果您是家长或监护人，并认为您的孩子在排行榜上公开了信息，请联系我们，我们会将其删除。</p>
+
+  <h2>11. 政策变更</h2>
+  <p>我们可能会不时更新本政策。页面顶部的日期表示最新版本；如有重要变更，我们会在应用内或应用商店页面中说明。变更后继续使用本应用即表示您接受更新后的政策。</p>
+
+  <h2>12. 联系我们</h2>
+  <p>David Toledo Sánchez · 秘鲁，利马<br>
+  电子邮箱：<a href="mailto:dtoledos2014@gmail.com">dtoledos2014@gmail.com</a></p>
+</article>
+</section>
+
+<!-- =====================================================================
+     ESPAÑOL
+     ===================================================================== -->
+<section class="lang-section" id="es" lang="es" data-title="Política de privacidad – Flappy Rocks">
+<article class="doc">
+  <h1>Política de privacidad</h1>
+  <p class="meta">Flappy Rocks · Última actualización: 28 de septiembre de 2026</p>
+
+  <div class="summary">
+    <h2>Resumen</h2>
+    <ul>
+      <li><strong>No hay cuenta ni registro</strong>. No pedimos tu nombre real, correo, teléfono ni ubicación.</li>
+      <li>La foto que eliges en <strong>“Crea tu personaje” se procesa solo en tu dispositivo</strong>. Nunca se sube a internet: ni a nuestros servidores, ni a Firebase, ni a nadie.</li>
+      <li>El <strong>apodo que escribes y tus puntajes se muestran en un ranking público</strong>. Por favor, no uses tu nombre real.</li>
+      <li>El juego muestra <strong>anuncios</strong> (banner y videos recompensados opcionales). Las redes publicitarias pueden recopilar un identificador publicitario del dispositivo.</li>
+      <li><strong>No vendemos</strong> tus datos.</li>
+    </ul>
+  </div>
+
+  <h2>1. Quiénes somos</h2>
+  <p>Esta Política de privacidad explica cómo el juego para móviles <strong>Flappy Rocks</strong> (nombre de paquete <code>com.davidtoledo.gallitorocas</code>; “la app” o “el juego”) maneja la información. La app es desarrollada y publicada por <strong>David Toledo Sánchez</strong>, desarrollador independiente con sede en Lima, Perú (“nosotros”). Al usar la app aceptas esta política. Si no estás de acuerdo, por favor no uses la app.</p>
+
+  <h2>2. Información que manejamos</h2>
+  <h3>2.1 Información que decides darnos</h3>
+  <ul>
+    <li><strong>Apodo (opcional).</strong> Puedes poner un apodo desde el menú principal. Si no lo haces, tus puntajes se guardan como “Anónimo”. Es texto libre que escribes tú, así que evita datos personales.</li>
+    <li><strong>Resultados de juego.</strong> Cuando termina una partida guardamos tu puntaje, el lugar (nivel) donde jugaste y la fecha y hora, junto con tu apodo. Con eso se arma el ranking público (ver sección 4).</li>
+    <li><strong>Una foto (opcional).</strong> Solo si usas “Crea tu personaje” (ver sección 3).</li>
+  </ul>
+  <h3>2.2 Información que recopilan automáticamente servicios de terceros</h3>
+  <p>Los servicios de publicidad y Google Firebase, que usa la app, pueden procesar información técnica como tu dirección IP, datos del dispositivo y del sistema operativo, y un identificador publicitario. Ver secciones 5 y 6.</p>
+  <h3>2.3 Información que no recopilamos</h3>
+  <ul>
+    <li>Nombre real, correo electrónico, número de teléfono o dirección postal.</li>
+    <li>Tu ubicación (precisa o aproximada). La app no pide permiso de ubicación.</li>
+    <li>Permisos de contactos, micrófono, cámara o almacenamiento. La app solo declara acceso a Internet y al estado de la red.</li>
+    <li>No hay inicio de sesión ni cuentas de redes sociales. No usamos herramientas propias de analítica ni de reporte de fallos.</li>
+  </ul>
+  <h3>2.4 Información que se guarda solo en tu dispositivo</h3>
+  <p>Tus ajustes y progreso (apodo, sonido activado/desactivado, lugar seleccionado, lugares desbloqueados, contadores que se usan para decidir cuándo se ofrece un video recompensado) y tu personaje personalizado (una imagen pequeña de tu cara, más el fondo y las alas que elegiste). Esta información se queda en tu dispositivo y no se envía a ningún lado, salvo el apodo que acompaña a tus puntajes.</p>
+
+  <h2>3. Tu foto y “Crea tu personaje”</h2>
+  <p>Esta función es opcional. Te permite convertir una foto tuya (o de quien elijas) en un personaje que vuela.</p>
+  <ul>
+    <li><strong>Cómo eliges la foto.</strong> Puedes elegir entre la galería y la cámara. La app abre el selector de fotos o la app de cámara de tu propio dispositivo, por lo que <strong>la app no necesita permiso de cámara ni de almacenamiento</strong>. La app solo recibe la imagen que eliges o tomas.</li>
+    <li><strong>Todo ocurre en tu dispositivo.</strong> La foto se recorta, se reduce a una pequeña imagen redonda de tu cara (192 × 192 píxeles) y se combina con las alas, todo de forma local.</li>
+    <li><strong>Dónde se guarda.</strong> Una copia temporal reducida de la foto elegida queda en la carpeta de caché privada de la app (otras apps no pueden leerla) para poder recortarla. Las fotos tomadas con esta función también se escriben en esa carpeta privada, no en tu galería. La imagen final de la cara se guarda en el almacenamiento privado de la app.</li>
+    <li><strong>No almacenamos tus imágenes en internet.</strong> Tu foto y la imagen de tu cara nunca se suben, transmiten, venden ni comparten. No se envían a nuestros servidores, a Firebase, a anunciantes ni a ningún otro tercero, y nosotros no podemos verlas.</li>
+    <li><strong>Cómo borrarlas.</strong> Crear un personaje nuevo reemplaza la imagen anterior. También puedes usar “Borrar almacenamiento / Borrar caché” de la app en los ajustes de tu dispositivo, o desinstalar la app, y todo se elimina.</li>
+    <li>Las apps de cámara y galería que uses son proporcionadas por tu dispositivo o por terceros y se rigen por sus propias políticas de privacidad.</li>
+  </ul>
+
+  <h2>4. Ranking público</h2>
+  <ul>
+    <li><strong>Qué se publica:</strong> tu apodo, puntaje, lugar y fecha. Se almacena en Google Firebase Cloud Firestore.</li>
+    <li><strong>Quién puede verlo:</strong> el ranking es público: cualquier jugador puede ver los mejores puntajes con sus apodos. No incluye tu foto, tus identificadores del dispositivo ni datos de contacto.</li>
+    <li><strong>Por favor elige un apodo que no te identifique.</strong></li>
+    <li><strong>Conservación:</strong> las entradas se conservan mientras exista el ranking. La app no permite que los usuarios editen ni borren entradas, pero puedes pedirnos que borremos las tuyas (ver sección 9).</li>
+    <li>Cambiar tu apodo solo afecta a los puntajes futuros; las entradas anteriores conservan el apodo anterior salvo que nos pidas borrarlas.</li>
+  </ul>
+
+  <h2>5. Publicidad</h2>
+  <p>La app se sostiene con anuncios: un <strong>banner</strong> en algunas pantallas y <strong>videos recompensados</strong> que puedes decidir ver (por ejemplo para desbloquear un lugar, continuar tras un Game Over o entrar a “Crea tu personaje”).</p>
+  <p>Según la versión que instalaste, los anuncios los proporciona <strong>Google AdMob</strong> (Google LLC) o <strong>Huawei Ads Kit / Petal Ads</strong> (Huawei, en la versión para dispositivos Huawei). Estos proveedores pueden recopilar y usar:</p>
+  <ul>
+    <li>un identificador publicitario (ID de publicidad de Google, o el Open Advertising ID – OAID de Huawei);</li>
+    <li>la dirección IP y una ubicación aproximada derivada de ella;</li>
+    <li>información del dispositivo y del sistema operativo (modelo, versión, idioma, tamaño de pantalla) e información de la app;</li>
+    <li>cómo interactúas con los anuncios (impresiones, clics, reproducciones de video).</li>
+  </ul>
+  <p>Lo usan para mostrar y medir anuncios, prevenir fraude y, cuando la ley y tus ajustes lo permiten, personalizar los anuncios. <strong>Nosotros no recibimos estos datos</strong>; solo vemos reportes agregados (por ejemplo, número de impresiones). Los anuncios pueden llevar a sitios web o tiendas que no controlamos.</p>
+  <p><strong>Tus controles.</strong> En los ajustes de tu dispositivo puedes restablecer o borrar tu ID de publicidad y desactivar los anuncios personalizados (en dispositivos con Google, en Ajustes › Google › Anuncios, o Privacidad › Anuncios; en dispositivos Huawei, en Ajustes › Privacidad › Anuncios; los nombres de los menús varían según el dispositivo y la versión del sistema). Ver videos recompensados es siempre opcional.</p>
+
+  <h2>6. Servicios de terceros</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Servicio</th><th>Proveedor</th><th>Finalidad</th><th>Datos involucrados</th><th>Más información</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Firebase Cloud Firestore</td><td>Google LLC</td><td>Almacena el ranking público</td>
+        <td>Apodo, puntaje, lugar, fecha; datos técnicos (como la dirección IP) que Google procesa para prestar el servicio</td>
+        <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacidad de Firebase</a></td>
+      </tr>
+      <tr>
+        <td>Google AdMob</td><td>Google LLC</td><td>Anuncios (versión estándar)</td>
+        <td>ID de publicidad, dirección IP, información del dispositivo, interacciones con anuncios</td>
+        <td><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Cómo usa Google los datos</a> · <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de privacidad de Google</a></td>
+      </tr>
+      <tr>
+        <td>Huawei Ads Kit (Petal Ads)</td><td>Huawei</td><td>Anuncios (versión para dispositivos Huawei)</td>
+        <td>OAID, dirección IP, información del dispositivo, interacciones con anuncios</td>
+        <td><a href="https://developer.huawei.com/consumer/en/hms/huawei-adskit/" target="_blank" rel="noopener">Ads Kit</a> y la declaración de privacidad de Huawei</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Estos proveedores actúan bajo sus propios términos y políticas de privacidad, que te recomendamos leer.</p>
+
+  <h2>7. Cómo usamos la información</h2>
+  <ul>
+    <li>Para hacer funcionar el juego y sus funciones (ranking, personaje personalizado, desbloqueo de lugares).</li>
+    <li>Para mantener el ranking funcionando y eliminar apodos o entradas abusivas o inapropiadas.</li>
+    <li>Para mostrar anuncios que ayudan a financiar la app.</li>
+  </ul>
+  <p><strong>No vendemos</strong> tu información personal y no creamos perfiles sobre ti.</p>
+
+  <h2>8. Compartir, conservación, seguridad y transferencias</h2>
+  <ul>
+    <li><strong>Compartir.</strong> Solo con los proveedores de servicios indicados arriba, cuando lo exija la ley o para proteger nuestros derechos o la seguridad de los usuarios. El ranking es público por diseño.</li>
+    <li><strong>Conservación.</strong> Los datos en tu dispositivo se conservan hasta que borres los datos de la app o la desinstales. Las entradas del ranking se conservan hasta que se borren a tu pedido o se retire el ranking.</li>
+    <li><strong>Seguridad.</strong> Los datos viajan hacia y desde Firebase por conexiones cifradas (HTTPS/TLS), y el ranking tiene reglas en el servidor que limitan lo que se puede escribir. Ningún método de almacenamiento o transmisión es 100 % seguro.</li>
+    <li><strong>Transferencias internacionales.</strong> Google y Huawei pueden procesar datos en países distintos al tuyo, incluido Estados Unidos, bajo sus propias garantías.</li>
+  </ul>
+
+  <h2>9. Tus opciones y derechos</h2>
+  <ul>
+    <li><strong>Apodo:</strong> puedes cambiarlo o borrarlo en cualquier momento desde el menú principal.</li>
+    <li><strong>Foto y personaje:</strong> se guardan solo en tu dispositivo; bórralos como se explica en la sección 3.</li>
+    <li><strong>Anuncios:</strong> usa los controles del dispositivo de la sección 5. Los videos recompensados son opcionales.</li>
+    <li><strong>Borrado del ranking:</strong> escríbenos al correo de abajo con tu apodo y, si puedes, el puntaje, lugar y fecha aproximados, y borraremos las entradas en un plazo razonable (normalmente dentro de 30 días).</li>
+    <li><strong>Derechos legales.</strong> Según donde vivas (por ejemplo bajo el RGPD de la UE/Reino Unido, la CCPA/CPRA de California o la Ley de Protección de Datos Personales de Perú, N.º 29733) puedes tener derecho a acceder, rectificar, suprimir, limitar u oponerte al tratamiento de tus datos personales, a retirar tu consentimiento y a presentar una reclamación ante tu autoridad de protección de datos. Contáctanos para ejercerlos.</li>
+  </ul>
+
+  <h2>10. Niños</h2>
+  <p>La app no está dirigida a menores de 13 años (ni a la edad mínima mayor que fije la ley de tu país, como 16 años en partes de la UE). No recopilamos a sabiendas información personal de menores. Si eres madre, padre o tutor y crees que tu hijo publicó información en el ranking, contáctanos y la eliminaremos.</p>
+
+  <h2>11. Cambios en esta política</h2>
+  <p>Podemos actualizar esta política de vez en cuando. La fecha de arriba indica la última versión; si los cambios son importantes lo indicaremos en la app o en la ficha de la tienda. Seguir usando la app después de un cambio significa que aceptas la política actualizada.</p>
+
+  <h2>12. Contacto</h2>
+  <p>David Toledo Sánchez · Lima, Perú<br>
+  Correo: <a href="mailto:dtoledos2014@gmail.com">dtoledos2014@gmail.com</a></p>
+</article>
+</section>
+
+</main>
+
+<footer>
+  © 2026 David Toledo Sánchez · Flappy Rocks
+</footer>
+
+<script>
+(function () {
+  var LANGS = ['en', 'zh', 'es'];
+  var HTML_LANG = { en: 'en', zh: 'zh-Hans', es: 'es' };
+  var KEY = 'flappy-rocks-privacy-lang';
+
+  function safeGet() { try { return window.localStorage.getItem(KEY); } catch (e) { return null; } }
+  function safeSet(v) { try { window.localStorage.setItem(KEY, v); } catch (e) { /* almacenamiento bloqueado: se ignora */ } }
+
+  function detect() {
+    var n = ((navigator.languages && navigator.languages[0]) || navigator.language || 'en').toLowerCase();
+    if (n.indexOf('zh') === 0) return 'zh';
+    if (n.indexOf('es') === 0) return 'es';
+    return 'en';
+  }
+
+  function fromUrl() {
+    var m = /[?&]lang=([a-z]{2})/i.exec(window.location.search);
+    if (m && LANGS.indexOf(m[1].toLowerCase()) !== -1) return m[1].toLowerCase();
+    var h = window.location.hash.replace('#', '').toLowerCase();
+    return LANGS.indexOf(h) !== -1 ? h : null;
+  }
+
+  function setLang(lang, remember) {
+    LANGS.forEach(function (l) {
+      var section = document.getElementById(l);
+      if (section) section.classList.toggle('active', l === lang);
+    });
+    var buttons = document.querySelectorAll('.lang-switch button');
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].setAttribute('aria-pressed', buttons[i].getAttribute('data-lang') === lang ? 'true' : 'false');
+    }
+    document.documentElement.lang = HTML_LANG[lang];
+    var active = document.getElementById(lang);
+    if (active && active.getAttribute('data-title')) document.title = active.getAttribute('data-title');
+    if (remember) safeSet(lang);
+    try {
+      var url = window.location.pathname + '?lang=' + lang;
+      window.history.replaceState(null, '', url);
+    } catch (e) { /* algunos navegadores bloquean replaceState en file:// */ }
+    window.scrollTo(0, 0);
+  }
+
+  var buttons = document.querySelectorAll('.lang-switch button');
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function () { setLang(this.getAttribute('data-lang'), true); });
+  }
+
+  // Prioridad: ?lang=xx en la URL (útil para darle un link directo a un revisor) → última elección → idioma del navegador.
+  var initial = fromUrl() || (LANGS.indexOf(safeGet()) !== -1 ? safeGet() : null) || detect();
+  setLang(initial, false);
+  window.scrollTo(0, 0);
+})();
+</script>
+</body>
+</html>
